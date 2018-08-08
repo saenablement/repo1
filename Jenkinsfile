@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'jdk9'
+      label 'jdk8'
     }
 
   }
