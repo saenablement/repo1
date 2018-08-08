@@ -10,6 +10,7 @@ pipeline {
       steps {
         echo "Hello ${MY_NAME}!"
         echo "${TEST_USER_USR} ${TEST_USER_PSW}"
+        echo "Hello ${params.Name}!"
         sh 'java -version'
       }
     }
