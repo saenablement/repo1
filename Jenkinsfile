@@ -9,7 +9,7 @@ pipeline {
     stage('say hello') {
       steps {
         echo "Hello ${MY_NAME}!"
-        echo "${TEST_USER_USR} ${TEST_USER_PWD}"
+        echo "${TEST_USER_USR} ${TEST_USER_PSW}"
         sh 'java -version'
       }
     }
