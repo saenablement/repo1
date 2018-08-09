@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('say hello') {
       steps {
-        echo "Hello ${MY_NAME}!"
+        echo 'Hello Stefan!'
         echo "${TEST_USER_USR} ${TEST_USER_PSW}"
         echo "Hello ${params.Name}!"
         sh 'java -version'
@@ -36,7 +36,11 @@ v1.3''', description: 'What to deploy?')
     MY_NAME = 'Stefan'
     TEST_USER = credentials('test-user')
   }
-  parameters {
-    string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
+  post {
+    aborted {
+      echo 'Why didn\'t you push my button?'
+
+    }
+
   }
 }
